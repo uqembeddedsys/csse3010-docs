@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Git - CSSE3010Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Git";
+    var mkdocs_page_input_path = "git.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> CSSE3010Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Git</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#csse3010_git_guide">CSSE3010 Git Guide</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#task_1_setting_up_your_git_account">Task 1: Setting up your git account</a></li>
+        
+            <li><a class="toctree-l3" href="#task_2_initializing_the_repository_locally">Task 2: Initializing the repository locally</a></li>
+        
+            <li><a class="toctree-l3" href="#task_3_public_key_generation">Task 3: Public Key Generation</a></li>
+        
+            <li><a class="toctree-l3" href="#task_4_cloning_your_repository">Task 4: Cloning Your Repository</a></li>
+        
+            <li><a class="toctree-l3" href="#task_5_creating_a_gitignore_file">Task 5: Creating a .gitignore file</a></li>
+        
+            <li><a class="toctree-l3" href="#task_6_staging_files">Task 6: Staging Files</a></li>
+        
+            <li><a class="toctree-l3" href="#task_7_synchronizing_changes">Task 7: Synchronizing changes</a></li>
+        
+            <li><a class="toctree-l3" href="#summary_of_important_commands">Summary of Important Commands</a></li>
+        
+            <li><a class="toctree-l3" href="#other_tips">Other tips</a></li>
+        
+            <li><a class="toctree-l3" href="#command_line_git">Command line git</a></li>
+        
+            <li><a class="toctree-l3" href="#troubleshooting">Troubleshooting</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">CSSE3010Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Git</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h3 id="csse3010_git_guide">CSSE3010 Git Guide</h3>
+<p>Use Git to manage your development. Benefit: Git is an distributed repository that you can use to keep track of your current code history and use for backup purposes. You can check in changes when you need to, not just when you are connected to the Internet. This means that your git history will be more like a “workbook” or diary of your progress.</p>
+<p>This document contains instructions on the following procedures:</p>
+<ul>
+<li>Setting up your git account</li>
+<li>Initialising the repository locally (Do this the first time only)</li>
+<li>Public Key Generation (For automatic authentication)</li>
+<li>Cloning your online repository</li>
+<li>Adding a .gitignore file (Do this once only)</li>
+<li>Committing changes using gitg (Each time an element of work is done)</li>
+<li>Synchronizing your local repository with the online repository (after each stage/project) </li>
+<li>Summary</li>
+<li>Using the Git Command Line Interface (CLI)</li>
+<li>Troubleshooting</li>
+</ul>
+<hr />
+<h4 id="task_1_setting_up_your_git_account">Task 1: Setting up your git account</h4>
+<p>Access to your Gitlab account is via your UQ login, using single sign on (SSO).
+Browse CSSE3010/CSSE7301 Gitlab using the URL: <a href="https://csse3010.uqcloud.net/">https://csse3010.uqcloud.net/</a>. Once logged in, you will see two repositories - the sourcelib repository and your empty repository.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="gitlab initial" src="images/gitlab_initial.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><em>Figure 1: Logging into CSSE3010/CSSE7301 Gitlab for the first time</em></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="task_2_initializing_the_repository_locally">Task 2: Initializing the repository locally</h4>
+<p>You will need to initialize your git repository locally and set up your global user name and user email. This is required to ensure that you can commit to your local repository. Open a terminal (in your Virtual Machine) and execute the following commands:</p>
+<pre><code>git config --global user.name &quot;&lt;MY.NAME&gt;&quot;
+git config --global user.email MY.EMAIL@student.uq.edu.au
+</code></pre>
+
+<p>NOTE: <code>&lt;MY.NAME&gt;</code> eg. “joe student”.</p>
+<p><strong>If you're using your own Linux machine (NOT THE CSSE3010 VIRTUAL MACHINE)}, you will also need to set up a local csse3010 directory under your home directory for later tasks. NOTE: The csse3010 folder must be set up under the home directory in order for important environment variables to work properly. Refer to the mylib guide for the full folder hierarchy.</strong> </p>
+<ul>
+<li>Change into home directory: <code>cd ~</code></li>
+<li>Create a folder called csse3010: <code>mkdir csse3010</code></li>
+</ul>
+<hr />
+<h4 id="task_3_public_key_generation">Task 3: Public Key Generation</h4>
+<p>You will need to generate a public and private key pair. The public key will need to be uploaded to your Gitlab account. This will allow your local git to be automatically authenticated to your online git account. Open a terminal and type the following commands:</p>
+<ul>
+<li>Generate key pair: <code>ssh-keygen</code>  </li>
+<li>Display public key generated above: <code>cat ~/.ssh/id_rsa.pub</code>  </li>
+</ul>
+<p>NOTE: press <code>&lt;enter&gt;</code> when asked for file location and pass-phrase. If you get asked if you want to overwrite the previous key, say 'yes'. The existing key in the virtual machine is a read-only "deploy" key for the sourcelib repository. Your new key will have more access than this key.</p>
+<p>Copy+paste the public key to the "My SSH Keys" section under the "SSH" tab in your Gitlab account's "Profile Settings". When copying the key, make sure you copy the complete key starting with ssh-rsa and ending with your user-name and host. To copy in the terminal window, highlight your complete key, then right click on the highlighted content and select copy.</p>
+<p>Back in your Gitlab account's "Profile Settings", click “Add an SSH key” and select a title for the key, eg. “csse3010vm”.</p>
+<p>Also run the following command: <code>ssh-add ~/.ssh/id_rsa</code></p>
+<p>NOTE: For VirtualBox users, make sure “clipboard, bidirectional” is enabled.</p>
+<hr />
+<h4 id="task_4_cloning_your_repository">Task 4: Cloning Your Repository</h4>
+<p><strong> If you're bring your own Linux environment instead of the CSSE3010/CSSE7301 Virtual Machine, you will first need to clone the <em>sourcelib</em> repository into your csse3010 folder. Virtual Machine users will already have <em>sourcelib</em> cloned in the csse3010 folder. <em>sourcelib</em> contains example programs to help you get started on the Nucleo platform, as well as configuration and library files for the onboard MCU. </strong>  </p>
+<p>Execute the following commands:<br />
+- Change into your csse3010 directory: <code>cd ~/csse3010</code><br />
+- Clone/copy the remote sourcelib repository into your csse3010 folder. This will automatically create a folder called sourcelib:<br />
+<code>git clone  git@csse3010-gitlab.zones.eait.uq.edu.au:source/sourcelib.git</code>  </p>
+<p>The clone URL used in the second command can be copied from the Gitlab website. The one we used in the instructions above is the SSH URL.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Git URL for cloning sourcelib" src="images/sourcelib_urls.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><em>Figure 2: Git URL for cloning sourcelib</em></td>
+</tr>
+</tbody>
+</table>
+<p>It is strongly recommended that you obtain the URL from Gitlab instead of manually typing it out to avoid typos.</p>
+<p>Repeat the above to set up your stages and project repositories.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Git URL for cloning an existing repository" src="images/clone_urls.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><em>Figure 3: Git URL for cloning an existing repository</em></td>
+</tr>
+</tbody>
+</table>
+<p>You have now completed your local repository setup. You can now use the gitg program to commit your files. Note that committing files only stores files locally. It DOES NOT synchronise your local Git repository with your online repository. See <a href="#task_7_synchronizing_changes">Task 7</a> for details on how to do this.</p>
+<p>When using git, you can graphically see the current history by running gitg .
+NOTE: you can be anywhere inside your git repository. If you ran the previous commands you
+should be in ~/csse3010/mylib (or any subdirectory of the project).</p>
+<p>NOTE: there are two labels in your gitg window, a <code>master</code> branch and a <code>origin/master</code> branch. The <code>master</code> branch is on your local repository, and all branches prefixed with <code>origin/</code> are on the remote server (CSSE3010/CSSE7301 Gitlab).</p>
+<hr />
+<h4 id="task_5_creating_a_gitignore_file">Task 5: Creating a .gitignore file</h4>
+<p>As your online Git repository is for code only, to remain clean, we add a “.gitignore” file to specify the extensions of certain files that should not be uploaded there. To do this, create a file called “.gitignore” in your repository, with one line for each type of file you want to ignore.</p>
+<ul>
+<li>Change into your mylib, stage or project folder:<br />
+<code>cd ~/csse3010/mylib</code></li>
+<li>Create .gitignore file by running the following command:<br />
+<code>echo -en '*.bin\n*.bin\n*.hex\n*.elf\n*.swp\n*~\n*.o\n*.a\n.svn\n.depend' &gt;&gt; .gitignore</code></li>
+<li>You can use any editor to view the file (nano, vim, etc.). To show the contents run:<br />
+<code>cat .gitignore</code></li>
+</ul>
+<p>Here is the contents of the .gitignore file:</p>
+<pre><code>*.bin
+*.hex
+*.elf
+*.swp
+*~
+*.o
+*.a
+.svn
+.depend 
+</code></pre>
+
+<p>As time goes on, you can add more file types in the ignore file. In the example above, I have added object files (.obj), and binary (elf, hex) files as well as the temporary files (.swp) created by pluma.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="gitg commit screen (click green icon, top right of dialog box)" src="images/screen1.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><em>Figure 3: gitg commit screen (click green icon, top right of dialog box)</em></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="task_6_staging_files">Task 6: Staging Files</h4>
+<p>Under normal development, you can use gitg to stage files, and commit them to your repository. This can be done under the ‘commit’ tab (green icon) seen in Figure 3.</p>
+<p>To stage a file for committing, double click on the file (under “Unstaged”), which will add it to the list of “Staged” files.</p>
+<p>To commit the staged files, add a commit message and click the commit button at the bottom of the screen (Figure 3).</p>
+<p>Figure 4 shows the revised history after this commit.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="gitg commit history" src="images/screen2.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><em>Figure 4: gitg commit history</em></td>
+</tr>
+</tbody>
+</table>
+<p>NOTE: the two branches, <code>origin/master</code> and <code>master</code> now point to different commits as changes have not been synchronized.</p>
+<hr />
+<h4 id="task_7_synchronizing_changes">Task 7: Synchronizing changes</h4>
+<p>To sync all the changes in our local repository to the online one on Gitlab, run the following command:  </p>
+<p><code>git push -u origin master</code></p>
+<p>This will make <code>origin/master</code> (remote repo) and <code>master</code> (local repo) point at the same commit. The above command only has to be run once when pushing to the first time to an empty remote repository. Just <code>git push</code> will be sufficient thereafter.</p>
+<h5 id="suggested_structure_of_your_stages_repository">Suggested Structure of your Stages Repository</h5>
+<p>Please refer to the mylib guide.</p>
+<p>Each mylib component, stage or project should have a new directory. Also note that binary files such as “main.hex”, “main.bin” (which are built using your Makefile), should not be in the repository. You should add these extensions to the “.gitignore” file.</p>
+<hr />
+<h4 id="summary_of_important_commands">Summary of Important Commands</h4>
+<ul>
+<li>To commit files, view history: <code>gitg</code></li>
+<li>To get the latest changes from the online repository: <code>git pull</code></li>
+<li>To push all your local commits to the online repository: <code>git push</code> (or <code>git push -u origin master</code> if pushing for the first time to an empty remote repository)  </li>
+<li>If you are recovering from a HDD failure, use the commands in the original guide <code>git clone &lt;URL&gt;</code></li>
+</ul>
+<hr />
+<h4 id="other_tips">Other tips</h4>
+<p>Commit changes regularly.</p>
+<p>You will be required to put your changes into the online Gitlab (AT LEAST) after each assessment, every session, including stage, project, etc.</p>
+<hr />
+<h4 id="command_line_git">Command line git</h4>
+<p>If you don’t like the graphical tool gitg , it is possible to do everything on the command line. Here are some common commands:</p>
+<ul>
+<li>Stage a file for a commit: git add <code>&lt;filename/file\_path/folder\_name/folder\_path&gt;</code></li>
+<li>Commit all staged files: git commit <code>&lt;filename/file\_path/folder\_name/folder\_path&gt; -m "your commit message"</code></li>
+<li>Check on the status of the repository: git status</li>
+<li>See a log of previous commits: git log</li>
+<li>Stage all new/modified/deleted files to be committed, respects .gitignore (Not recommended)</li>
+<li>Revert all files to the last commit: git checkout .</li>
+</ul>
+<p>Other useful tools:</p>
+<ul>
+<li>When running Git on larger projects or teams, branching is a very useful way to manage new features. Here is a 'game' which lets you practice git commands related to branching: <a href="https://pcottle.github.io/learnGitBranching/">Learn Git Branching</a></li>
+</ul>
+<h4 id="troubleshooting">Troubleshooting</h4>
+<p><strong> Error: "Could not resolve hostname <code>csse3010-gitlab.zones.eait.uq.edu.au</code>: No address associated with host" </strong></p>
+<ul>
+<li>This URL should have been copied directly from the gitlab web interface. Typing this manually has the potential to cause typos to exist.</li>
+<li>This problem may be caused by your VM not being connected to the Internet. So:
+<strong> Make sure your computer (the “host”) is connected to the Internet.
+</strong> Reboot your VM.
+** Try again (this seems to fix the problem 90\% of the time.</li>
+</ul>
+<p><strong> Error: Unable to do a git pull </strong></p>
+<p>"Your local changes to the following files would be overwritten by merge: Please, commit your changes or stash them before you can merge. Aborting"</p>
+<p>Reset your git and completely overwrite your local changes - NOTE: ALL YOUR CHANGES WILL BE DELETED AND REPLACED BY THE ONLINE GIT FILES. Run the following commands:</p>
+<pre><code>git reset --hard HEAD 
+git pull
+</code></pre>
+
+<p>Alternatively (if this your own repository) commit your changes before running git pull , and git will attempt to merge your changes. This will only happen if you make changes on two different machines.</p>
+<p><strong> Error during clone: "fatal: protocol error: bad line length character: No s" </strong></p>
+<p>Most likely you are using the wrong repository URI. It is better to log into git and copy+paste the URI for your project
+(it will be something like git@csse3010-gitlab.zones.eait.uq.edu.au:12345678/mylib.git).</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
