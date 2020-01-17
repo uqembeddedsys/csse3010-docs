@@ -1,4 +1,4 @@
-site_name: CSSE3010 Docs
+site_name: CSSE3010Docs
 nav:
 - Home: 'index.md'
 - Git: 'git.md'
