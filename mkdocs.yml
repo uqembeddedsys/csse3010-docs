@@ -1,0 +1,9 @@
+site_name: CSSE3010 Docs
+nav:
+- Home: 'index.md'
+- Git: 'git.md'
+theme: readthedocs
+markdown_extensions:
+    - toc:
+        baselevel: 3
+        separator: "_"
