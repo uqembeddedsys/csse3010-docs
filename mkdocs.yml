@@ -1,7 +1,16 @@
 site_name: CSSE3010Docs
 nav:
 - Home: 'index.md'
-- Git: 'git.md'
+- Git: 'git/git.md'
+- Mylib: 'mylib/mylib.md'
+- Workbook: 
+    - 'Workbook Format': 'workbook/workbook.md'
+    - 'Schematic': 'workbook/schematic/schematic.md'
+    - 'Flowcharts': 'workbook/flowcharts/flowcharts.md'
+    - 'State Diagram': 'workbook/state_diagram/state_diagram.md'
+- Setup:
+    - 'Virtual Machine': 'setup/virtual_machine/virtual_machine.md'
+    - 'Native Linux Setup Installation': 'setup/linux/linux.md'
 theme: readthedocs
 markdown_extensions:
     - toc:
